@@ -1,0 +1,1 @@
+export { AdminMediaPage } from "./AdminMediaPage";

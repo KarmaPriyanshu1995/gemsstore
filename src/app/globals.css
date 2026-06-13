@@ -1,0 +1,116 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Maharaja Heritage brand tokens */
+  --color-ivory: #f6f0e4;
+  --color-emerald: #0f7b5f;
+  --color-gold: #c7a45a;
+  --color-sandstone: #d7c6a3;
+  --color-walnut: #5b4636;
+
+  --font-heading: var(--font-cormorant);
+  --font-body: var(--font-inter);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Shadcn semantic tokens mapped to Maharaja Heritage palette */
+  --background: #f6f0e4;
+  --foreground: #5b4636;
+  --card: #f6f0e4;
+  --card-foreground: #5b4636;
+  --popover: #f6f0e4;
+  --popover-foreground: #5b4636;
+  --primary: #0f7b5f;
+  --primary-foreground: #f6f0e4;
+  --secondary: #d7c6a3;
+  --secondary-foreground: #5b4636;
+  --muted: #d7c6a3;
+  --muted-foreground: #5b4636;
+  --accent: #c7a45a;
+  --accent-foreground: #5b4636;
+  --destructive: #b91c1c;
+  --destructive-foreground: #f6f0e4;
+  --border: #d7c6a3;
+  --input: #d7c6a3;
+  --ring: #0f7b5f;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading), Georgia, serif;
+  }
+
+  .font-body {
+    font-family: var(--font-body), system-ui, sans-serif;
+  }
+}
