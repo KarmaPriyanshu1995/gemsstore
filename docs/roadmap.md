@@ -48,7 +48,7 @@
 - [x] CMS pages
 - [x] SEO settings
 - [x] Media library
-- [ ] Settings
+- [x] Settings
 
 ## Phase 6 — Backend Integration
 

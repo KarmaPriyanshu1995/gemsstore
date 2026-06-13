@@ -21,3 +21,4 @@ export { getAdminCustomers } from "./admin-customers.service";
 export { getAdminCms } from "./admin-cms.service";
 export { getAdminMedia } from "./admin-media.service";
 export { getAdminSeo } from "./admin-seo.service";
+export { getAdminSettings } from "./admin-settings.service";

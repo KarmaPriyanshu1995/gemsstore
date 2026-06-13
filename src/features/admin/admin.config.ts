@@ -31,7 +31,7 @@ export const adminNavItems: AdminNavItem[] = [
     href: "/admin/signature-experience",
     icon: Sparkles,
   },
-  { label: "Settings", href: "/admin/settings", icon: Settings, comingSoon: true },
+  { label: "Settings", href: "/admin/settings", icon: Settings },
 ];
 
 export const adminBreadcrumbLabels: Record<string, string> = {
